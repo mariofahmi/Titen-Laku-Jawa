@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { ShieldAlert, X, CheckCircle2 } from "lucide-react";
 
 interface DisclaimerModalProps {
@@ -32,7 +32,7 @@ export const DisclaimerModal: React.FC<DisclaimerModalProps> = ({
           <div className="flex items-center gap-3.5">
             <div className="w-13 h-13 sm:w-14 sm:h-14 rounded-2xl bg-white p-1 border border-[#d9c9b5] flex items-center justify-center shadow-xs shrink-0 overflow-hidden">
               <img
-                src="/logo-mf.png"
+                src={`${import.meta.env.BASE_URL}logo-mf.png`}
                 alt="Logo Mario Fahmi"
                 className="w-full h-full object-contain"
               />

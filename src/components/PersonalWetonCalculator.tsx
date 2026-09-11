@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from "react";
+﻿import React, { useState, useMemo, useEffect } from "react";
 import {
   User,
   UserCheck,
@@ -309,7 +309,7 @@ export const PersonalWetonCalculator: React.FC<PersonalWetonCalculatorProps> = (
             <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
               <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
                 <img
-                  src="/logo-mf.png"
+                  src={`${import.meta.env.BASE_URL}logo-mf.png`}
                   alt="Logo Mario Fahmi"
                   style={{ width: "48px", height: "48px", objectFit: "contain", display: "block" }}
                 />
@@ -490,7 +490,7 @@ export const PersonalWetonCalculator: React.FC<PersonalWetonCalculatorProps> = (
             </div>
             <div>
               <img
-                src="/logo-mf.png"
+                src={`${import.meta.env.BASE_URL}logo-mf.png`}
                 alt="Logo Mario Fahmi"
                 style={{ width: "38px", height: "38px", objectFit: "contain", display: "inline-block" }}
               />
@@ -537,7 +537,7 @@ export const PersonalWetonCalculator: React.FC<PersonalWetonCalculatorProps> = (
               <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
                   <img
-                    src="/logo-mf.png"
+                    src={`${import.meta.env.BASE_URL}logo-mf.png`}
                     alt="Logo Mario Fahmi"
                     style={{ width: "48px", height: "48px", objectFit: "contain", display: "block" }}
                   />
@@ -643,7 +643,7 @@ export const PersonalWetonCalculator: React.FC<PersonalWetonCalculatorProps> = (
               </div>
               <div>
                 <img
-                  src="/logo-mf.png"
+                  src={`${import.meta.env.BASE_URL}logo-mf.png`}
                   alt="Logo Mario Fahmi"
                   style={{ width: "38px", height: "38px", objectFit: "contain", display: "inline-block" }}
                 />

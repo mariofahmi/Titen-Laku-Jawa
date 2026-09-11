@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from "react";
+﻿import React, { useState, useMemo, useEffect } from "react";
 import {
   BookOpen,
   Calendar,
@@ -577,7 +577,7 @@ export const DynamicCalendarForecast: React.FC<DynamicCalendarProps> = ({
               <tr style={{ border: 'none', background: 'transparent' }}>
                 <td style={{ width: '60px', verticalAlign: 'middle', border: 'none', padding: '0 16px 0 0', background: 'transparent' }}>
                   <img
-                    src="/logo-mf.png"
+                    src={`${import.meta.env.BASE_URL}logo-mf.png`}
                     alt="Logo Mario Fahmi"
                     style={{ width: '54px', height: '54px', objectFit: 'contain', display: 'block' }}
                   />

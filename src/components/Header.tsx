@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+﻿import React, { useState } from "react";
 import {
   Compass,
   Calendar,
@@ -100,7 +100,7 @@ export const Header: React.FC<HeaderProps> = ({
             <div className="flex items-center gap-3.5">
               <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-white p-1.5 flex items-center justify-center shadow-md border border-[#c49746]/40 overflow-hidden shrink-0 transition-transform hover:scale-105">
                 <img
-                  src="/logo-mf.png"
+                  src={`${import.meta.env.BASE_URL}logo-mf.png`}
                   alt="Logo Mario Fahmi"
                   className="w-full h-full object-contain"
                 />

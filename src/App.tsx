@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+﻿import React, { useState, useMemo } from "react";
 import { Header, ActiveTab } from "./components/Header";
 import { DayCompass } from "./components/DayCompass";
 import { EventForecaster } from "./components/EventForecaster";
@@ -142,7 +142,7 @@ export function App() {
             <div className="flex items-center gap-3.5 text-center md:text-left">
               <div className="w-12 h-12 rounded-xl bg-white p-1.5 border border-[#dfd2be] flex items-center justify-center shrink-0 shadow-xs overflow-hidden">
                 <img
-                  src="/logo-mf.png"
+                  src={`${import.meta.env.BASE_URL}logo-mf.png`}
                   alt="Logo Mario Fahmi"
                   className="w-full h-full object-contain"
                 />
