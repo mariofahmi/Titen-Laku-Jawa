@@ -1,7 +1,7 @@
 # ⚜️ TITEN LAKU JAWA
 ### *Sistem Perhitungan Waktu, Watak, dan Navigasi Irama Siklus Hidup Manusia Jawa*
 
-Aplikasi modern, presisi, dan komprehensif untuk perhitungan siklus waktu tradisi Jawa, kalkulator weton & peta jiwa kelahiran, kalender dinamis multi-tahun 9 kolom, serta generator sertifikat piagam berlandaskan ilmu **Titen Laku Jawa**.
+**A modern, precise, and comprehensive application for calculating traditional Javanese time cycles, grounded in the ancient science of Javanese Titen Laku. Designed by Mario Fahmi Syahrial**
 
 ---
 
