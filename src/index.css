@@ -1,0 +1,272 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #faf7f2;
+    color: #261b11;
+    background-image: radial-gradient(#e9decb 0.75px, transparent 0.75px), radial-gradient(#e9decb 0.75px, #faf7f2 0.75px);
+    background-size: 30px 30px;
+    background-position: 0 0, 15px 15px;
+  }
+}
+
+.font-display {
+  font-family: 'Marcellus', serif;
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-serif-title {
+  font-family: 'Marcellus', Georgia, serif;
+}
+
+/* Custom delicate scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Subtle Royal Gold Border & Shimmer effects */
+.border-gold {
+  border-color: #d4af37;
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #c49746 0%, #8c6239 100%);
+}
+
+.text-gold {
+  color: #c49746;
+}
+
+.gold-glow {
+  box-shadow: 0 0 25px -5px rgba(200, 155, 60, 0.25);
+}
+
+.ornament-line {
+  background: linear-gradient(90deg, transparent, #d4b886, transparent);
+}
+
+/* ==========================================================================
+   PRINT / PDF EXPORT OPTIMIZATION (@media print)
+   Menjamin tabel A4 Landscape 9 Kolom utuh, tidak terpotong, tanpa elemen web
+   ========================================================================== */
+@media print {
+  @page {
+    size: A4 landscape;
+    margin: 6mm 8mm 6mm 8mm;
+  }
+
+  *, *::before, *::after {
+    overflow: visible !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  html, body {
+    background: #ffffff !important;
+    background-image: none !important;
+    color: #000000 !important;
+    font-size: 8.5pt !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Sembunyikan elemen navigasi, tombol, modal, audio, dan kontrol interaktif */
+  header,
+  footer,
+  nav,
+  dialog,
+  .print-hidden,
+  .print\:hidden,
+  .print\:hidden *,
+  button,
+  select,
+  input,
+  [role="dialog"] {
+    display: none !important;
+  }
+
+  /* Tampilkan elemen khusus print */
+  .print\:block,
+  .print-block {
+    display: block !important;
+  }
+  .print\:flex,
+  .print-flex {
+    display: flex !important;
+  }
+  .print\:grid,
+  .print-grid {
+    display: grid !important;
+  }
+
+  /* Hapus batas lebar pada kontainer utama saat cetak */
+  main {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Hilangkan scroll overflow yang menyebabkan kolom kanan terpotong */
+  .overflow-x-auto {
+    overflow: visible !important;
+    display: block !important;
+    border: none !important;
+  }
+
+  /* Piagam Penghargaan / Profil Jiwa: Memenuhi satu kertas A4 Landscape utuh & presisi */
+  .piagam-certificate-print {
+    width: 100% !important;
+    height: 194mm !important;
+    max-height: 194mm !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    margin: 0 auto !important;
+  }
+
+  .piagam-certificate-print * {
+    box-sizing: border-box !important;
+  }
+
+  .piagam-certificate-print table {
+    width: 100% !important;
+    border-collapse: separate !important;
+    border: none !important;
+    background: transparent !important;
+    margin: 0 !important;
+    table-layout: auto !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .piagam-certificate-print td,
+  .piagam-certificate-print th {
+    white-space: normal !important;
+    background-color: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+  }
+
+  .piagam-certificate-print tbody tr:nth-child(even) td {
+    background-color: transparent !important;
+  }
+
+  table:not(.piagam-certificate-print table) {
+    width: 100% !important;
+    max-width: 100% !important;
+    border-collapse: collapse !important;
+    table-layout: auto !important;
+    font-size: 8pt !important;
+    page-break-inside: auto !important;
+  }
+
+  thead {
+    display: table-header-group !important;
+  }
+
+  tbody {
+    display: table-row-group !important;
+  }
+
+  tr {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* Header Tabel Cetak - Klasik Keraton Elegan & Berwibawa */
+  th:not(.piagam-certificate-print th) {
+    background-color: #2b1d12 !important;
+    color: #fdfaf3 !important;
+    border: 1px solid #3d2919 !important;
+    padding: 5px 6px !important;
+    font-weight: 700 !important;
+    font-size: 8pt !important;
+    text-align: left !important;
+    white-space: nowrap !important;
+    letter-spacing: 0.02em !important;
+  }
+
+  /* Sel Tabel Cetak */
+  td:not(.piagam-certificate-print td) {
+    border: 1px solid #d8cab7 !important;
+    padding: 4px 6px !important;
+    font-size: 7.5pt !important;
+    color: #1a1007 !important;
+    background-color: #ffffff !important;
+    white-space: nowrap !important;
+  }
+
+  /* Zebra striping untuk kenyamanan membaca data tabel */
+  tbody:not(.piagam-certificate-print tbody) tr:nth-child(even) td {
+    background-color: #faf7f2 !important;
+  }
+
+  tr:hover {
+    background-color: transparent !important;
+  }
+
+  /* Warna hari Minggu */
+  tr.row-minggu td {
+    color: #b91c1c !important;
+    background-color: #fff9f9 !important;
+  }
+  tr.row-minggu td:nth-child(1),
+  tr.row-minggu td:nth-child(2) {
+    font-weight: 800 !important;
+    color: #c5221f !important;
+  }
+
+  /* Pasaran badge di kertas cetak */
+  table span[class*="badge-pasaran"],
+  table span.badge-pasaran {
+    border: 1px solid #b8a38b !important;
+    background-color: #f4ecdf !important;
+    color: #2c1c0f !important;
+    font-weight: 700 !important;
+    padding: 1.5px 5px !important;
+    border-radius: 4px !important;
+    display: inline-block !important;
+  }
+
+  /* Baris Hari Ini tetap jelas dan berwibawa */
+  tr#today-calendar-row td {
+    background-color: #fefce8 !important;
+    border-top: 2px solid #b45309 !important;
+    border-bottom: 2px solid #b45309 !important;
+    font-weight: bold !important;
+    color: #78350f !important;
+  }
+
+  /* Panel rujukan filosofis mulai di halaman baru */
+  .reference-container {
+    break-before: page !important;
+    page-break-before: always !important;
+    margin-top: 20px !important;
+  }
+
+  .reference-panel, .ref-panel {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    border: 1px solid #c8b9a6 !important;
+    background-color: #faf7f2 !important;
+    padding: 10px !important;
+    border-radius: 8px !important;
+  }
+}
+
+
+

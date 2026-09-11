@@ -1,0 +1,6 @@
+{
+  "name": "Kalender Pawukon - Forecasting Siklus Hidup Jawa",
+  "description": "Aplikasi komprehensif perhitungan waktu, forecasting ritme siklus hidup, dan panduan memilih hari baik berlandaskan sistem Kalender Pawukon Jawa (Wuku, Pasaran, Sadworo, Caturworo, Triworo, Dasaworo, dan Sasi).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
